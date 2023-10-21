@@ -23,17 +23,17 @@ func init() {
 	Conf.SetDefault("Database.User", "")
 	Conf.SetDefault("Database.Pass", "")
 	Conf.SetDefault("Database.Host", "")
-	Conf.SetDefault("Database.Port", "")
+	Conf.SetDefault("Database.Port", 0)
 	Conf.SetDefault("Database.Name", "")
 
 	Conf.SetDefault("JWT.AccessSecret", "")
 	Conf.SetDefault("Admin.Secret", "")
-	Conf.SetDefault("Verify.Interval", "")
+	Conf.SetDefault("Verify.Interval", 300)
 
 	Conf.SetDefault("OIDC.32BKey", "")
 	Conf.SetDefault("OIDC.WebID", "")
 	Conf.SetDefault("OIDC.WebSecret", "")
-	Conf.SetDefault("OIDC.RedirectAllowedList", "")
+	Conf.SetDefault("OIDC.RedirectAllowedList", []string{})
 	Conf.SetDefault("OIDC.Issuer", "")
 
 	replacer := strings.NewReplacer(".", "_")
